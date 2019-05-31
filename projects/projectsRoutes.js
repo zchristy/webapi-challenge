@@ -18,6 +18,16 @@ router.post('/', validateProject, (req, res) => {
 
 });
 
+router.get('/', (req, res) => {
+  projectsDb.get()
+  .then(proj => {
+    res.status(200).json(proj)
+  })
+  .catch(err => {
+    res.status(500).json({error: "Bad Request"})
+  })
+});
+
 router.get('/:id', validateId, (req, res) => {
   projectsDb.get(req.projectId)
   .then(proj => {

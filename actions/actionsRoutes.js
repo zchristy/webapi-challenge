@@ -29,6 +29,17 @@ router.get('/:id', validateId, (req, res) => {
   })
 });
 
+router.get('/', (req, res) => {
+
+  actionsDb.get()
+  .then(act => {
+    res.status(200).json(act)
+  })
+  .catch(err => {
+    res.status(500).json({error: "Bad Request"})
+  })
+});
+
 router.delete('/:id', validateId,  (req, res) => {
 
   actionsDb.remove(req.actionId)
