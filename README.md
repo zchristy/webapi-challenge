@@ -26,13 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+  `Express has quite a few methods that come with it, and express.json() is a lot like the body-parser dependency`
+
 - [ ] Describe Middleware?
+
+  `Middleware is a function that is ran before the request callback function, it can also evaluate certain pieces of code to validate the data being passed through. `
 
 - [ ] Describe a Resource?
 
+  `is an object with a type, associated data, and can have relationships with other resources `
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+  `The api can sen a status code 200/201 or a JSON message of success`
+
 - [ ] How can we partition our application into sub-applications?
+
+  `We can use express.router() and divide the app up with different routes from different db files. `
 
 ## Project Setup
 
