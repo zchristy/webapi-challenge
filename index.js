@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors')
 
 const server = require('./server.js');
 const projectsRoutes = require('./projects/projectsRoutes.js')
@@ -6,6 +7,7 @@ const actionsRoutes = require('./actions/actionsRoutes.js')
 
 const app = express();
 
+app.use(cors())
 app.use('/', server)
 app.use('/api/projects', projectsRoutes)
 app.use('/api/actions', actionsRoutes)
